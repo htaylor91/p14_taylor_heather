@@ -14,7 +14,7 @@ function Logo() {
           className={'object-contain w-20 h-20'}
         />
       </div>
-      <div className="font-Copperplate whitespace-nowrap">
+      <div className="whitespace-nowrap">
         <h1 className='text-xl'>HRnet</h1>
         <p className='text-sm'>by Wealth Health</p>
       </div>
