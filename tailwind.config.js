@@ -23,8 +23,8 @@ module.exports = {
         content: "hsl(var(--color-content) / <alpha-value>)",
       },
       fontFamily: {
-        'Copperplate': ['var(--font-copperplate)'],
-        'Roboto': ['var(--font-roboto)'],
+        Copperplate: ['var(--font-copperplate)'],
+        Nunito: ['var(--font-nunito)'],
       },
     },
   },
