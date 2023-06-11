@@ -17,7 +17,7 @@ function SelectEntries({ table }: { table: Table<Employee> }) {
       <Select
         value={pageSize.toString()}
         onValueChange={(value) => handlePageSizeChange({ target: { value } })}>
-        <SelectTrigger className="w-[80px]">
+        <SelectTrigger className="w-[80px]" aria-label="choose number of entries">
           <SelectValue placeholder={pageSize} />
         </SelectTrigger>
         <SelectContent className="w-[80px]">

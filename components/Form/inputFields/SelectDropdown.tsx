@@ -33,7 +33,7 @@ function SelectDropdown({ label, name, position, options, control }: {
           <FormLabel>{label}</FormLabel>
           <Select onValueChange={field.onChange} defaultValue={field.value}>
             <FormControl>
-              <SelectTrigger className={'w-full'}>
+              <SelectTrigger className={'w-full'} aria-label="select">
                 <SelectValue placeholder={label} />
               </SelectTrigger>
             </FormControl>

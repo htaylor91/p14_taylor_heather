@@ -24,7 +24,7 @@ import {
 import { useCallback, useState } from "react"
 import type { Employee } from "@/data/employee"
 import TablePagination from "./Pagination"
-import SelectEntries from './MySelectEntries';
+import SelectEntries from './SelectEntries';
 import Search from "./Search"
 import TotalEntries from "./TotalEntries"
 
