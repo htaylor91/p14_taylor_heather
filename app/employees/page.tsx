@@ -1,9 +1,11 @@
 "use client"
-
-import DataTable from "@/components/Table/DataTable";
+import dynamic from 'next/dynamic'
 import useStore from '@/lib/useStore'
 import { useEmployeeStore } from '@/lib/useEmployeeStore'
 import { tableColumns } from "@/components/Table/tableColumns";
+
+
+const DataTable = dynamic(() => import('@/components/Table/DataTable'))
 
 export default function Employees() {
 	const employees = useStore(useEmployeeStore, (state) => state.employees)

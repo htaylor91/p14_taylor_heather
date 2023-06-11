@@ -30,6 +30,10 @@
   }
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 button,
 input,
 select,
@@ -38,9 +42,7 @@ textarea {
   font-size: 100%;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+
 
 .root-layout {
   margin: 0;

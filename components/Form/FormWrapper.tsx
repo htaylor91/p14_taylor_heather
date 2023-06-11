@@ -1,14 +1,14 @@
 'use client'
 
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
 import { useState } from 'react'
-import Form from '@/components/Form/Form'
 
 const ConfirmationModal = dynamic(() =>
     import('reactjs-dialog-modal').then((mod) => mod.Modal),
 );
 
 const ModalChildren = dynamic(() => import('@/components/Form/ModalChildren'));
+const Form = dynamic(() => import('@/components/Form/Form'))
 
 function FormWrapper() {
     const [refreshKey, setRefreshKey] = useState(0);

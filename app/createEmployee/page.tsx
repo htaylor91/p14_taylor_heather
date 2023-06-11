@@ -1,5 +1,6 @@
-import FormWrapper from '@/components/Form/FormWrapper'
+import dynamic from 'next/dynamic'
 
+const FormWrapper = dynamic(() => import('@/components/Form/FormWrapper'))
 function Page() {
     return (
         <section className={"mx-auto px-4 max-w-7xl flex flex-col items-center"}>

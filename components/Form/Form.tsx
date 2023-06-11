@@ -1,12 +1,12 @@
 "use client"
-
+import dynamic from 'next/dynamic'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { Button } from "@/components/ui/button"
-import { FormProvider } from "@/components/ui/form"
-import DatePicker from "./inputFields/DatePicker"
-import TextInput from "./inputFields/TextInput"
-import SelectDropdown from "./inputFields/SelectDropdown"
+const SelectDropdown = dynamic(() => import('./inputFields/SelectDropdown'))
+const DatePicker = dynamic(() => import('./inputFields/DatePicker'))
+const TextInput = dynamic(() => import('./inputFields/TextInput'))
+const Button = dynamic(() => import('@/components/ui/button').then((mod) => mod.Button),);
+import { FormProvider } from '@/components/ui/form'
 import { states, stateNames } from '@/data/states'
 import { departments } from '@/data/departments'
 import { addEmployee } from '@/lib/useEmployeeStore'
