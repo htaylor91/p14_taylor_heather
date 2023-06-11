@@ -32,7 +32,7 @@
 		"react-day-picker": "^8.7.1",
 		"react-dom": "18.2.0",
 		"react-hook-form": "^7.44.3",
-		"reactjs-dialog-modal": "^0.0.5",
+		"reactjs-dialog-modal": "^0.0.6",
 		"tailwind-merge": "^1.13.1",
 		"ts-node": "^10.9.1",
 		"typescript": "5.1.3",
