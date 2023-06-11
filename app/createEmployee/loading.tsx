@@ -1,4 +1,5 @@
 export default function Loading() {
-    // Or a custom loading skeleton component
-    return <div className={"skeleton"}>Loading create employee</div>;
+    return (
+        <div className={"skeleton border rounded-md max-w-7xl mx-auto"}></div>
+    )
 }
