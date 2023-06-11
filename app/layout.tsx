@@ -1,5 +1,5 @@
 import './global.css'
-import { roboto, copperplate } from './fonts/fonts'
+import { nunito, copperplate } from './fonts/fonts';
 import { Metadata } from 'next';
 import Header from '@/components/Navigation/Header';
 import Footer from '@/components/Navigation/Footer';
@@ -14,11 +14,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode,
 }) {
-
   return (
-    <html lang="en" className={`${roboto.variable} ${copperplate.variable}`}>
-      <body className="bg-bkg text-content font-Roboto">
-        <Header />
+    <html lang="en" className={`${nunito.className} ${copperplate.variable}`}>
+      <body className={`root-layout bg-bkg text-content `}>
+        <Header className={'border-b-brand-light'} />
         {children}
         <Footer />
       </body>

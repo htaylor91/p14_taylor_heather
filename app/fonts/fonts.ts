@@ -1,4 +1,4 @@
-import { Roboto } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import localFont from 'next/font/local';
 
 export const copperplate = localFont({
@@ -7,8 +7,10 @@ export const copperplate = localFont({
   variable: '--font-copperplate',
 });
 
-export const roboto = Roboto({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-roboto',
-})
+export const nunito = Nunito(
+  {
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-nunito',
+  }
+)
