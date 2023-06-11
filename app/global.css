@@ -38,19 +38,14 @@ textarea {
   font-size: 100%;
 }
 
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-* {
+.root-layout {
   margin: 0;
-  padding: 0;
-}
-
-body {
-  min-height: 101vh;
-  min-height: 101dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: 
@@ -59,20 +54,19 @@ body {
     'footer';
 }
 
-body > header {
+.root-layout > header {
   grid-area: header;
 }
 
-main {
+.root-layout > main {
   grid-area: main;
-  overflow: hidden;
 }
 
 main > section {
   height: 100%;
 }
 
-body > footer {
+.root-layout > footer {
   grid-area: footer;
 }
 
@@ -120,5 +114,42 @@ img, picture, svg, video {
 
   .navlink-active {
     color: hsl(var(--color-brand-light));
+  }
+}
+
+/*Modal dialog styles*/
+.dialog::backdrop {
+  background-color: hsl(72deg 88% 23% / 20%);
+  animation: fadein 0.5s forwards;
+}
+
+.dialog:modal {
+  animation: fadein 0.5s forwards;
+}
+
+.dialog.close::backdrop {
+  animation: fadeout 0.5s forwards;
+}
+
+.dialog.close:modal {
+  animation: fadeout 0.5s forwards;
+}
+
+/*Modal fade animations*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
